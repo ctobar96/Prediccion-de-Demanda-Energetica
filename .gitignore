@@ -128,6 +128,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Archivo .env
+MLFLOW_TRACKING_URI=postgresql://mlops_user:mlops_password@localhost:5432/mlflow_db
+
 # Spyder project settings
 .spyderproject
 .spyproject

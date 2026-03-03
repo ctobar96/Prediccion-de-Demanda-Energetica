@@ -1,9 +1,30 @@
 ##### Core scientific packages
-jupyterlab~=4.0.8
 matplotlib~=3.8.1
-numpy~=1.26.2
-pandas~=2.1.3
 scipy~=1.11.3
 
-##### Machine Learning packages
-scikit-learn~=1.3.2
+
+
+
+# ==========================================
+# ⚡ Energy Demand Pipeline - Dependencias
+# ==========================================
+
+# --- 1. Ingesta de Datos y Utilidades ---
+requests==2.31.0          # Para consumir la API de Open-Meteo
+python-dotenv==1.0.0      # Para manejar variables de entorno (credenciales, URIs)
+
+# --- 2. Procesamiento de Datos (Capas Plata y Oro) ---
+pandas==2.1.1             # Manipulación principal de datos tabulares
+pyarrow==13.0.0           # Motor subyacente para guardar y leer formato Parquet eficientemente
+numpy==1.26.0             # Operaciones numéricas base
+
+# --- 3. Machine Learning ---
+scikit-learn==1.3.1       # Para preprocesamiento (Pipelines, StandardScaler) y métricas
+xgboost==2.0.0            # Nuestro modelo predictivo principal
+
+# --- 4. MLOps y Tracking ---
+mlflow==2.7.1             # Para registrar experimentos, métricas y modelos
+psycopg2-binary==2.9.9    # Driver para que MLflow pueda guardar su metadata en PostgreSQL
+
+# --- 5. Entorno de Desarrollo (Opcional pero recomendado) ---
+jupyterlab==4.0.6         # Para exploración de datos interactiva
